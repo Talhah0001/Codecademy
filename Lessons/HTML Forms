@@ -1,14 +1,14 @@
 <form>
-				<h1>Login to start creating a burger!</h1>
+	<h1>Login to start creating a burger!</h1>
         <label for="username">Username:</label>
-  			<input type="text" name="username" id="username">
+  	<input type="text" name="username" id="username">
         <br>
         <label for="user-pw">Password:</label>
-				<input id="user-pw" type="password" name="user-pw"
+	<input id="user-pw" type="password" name="user-pw"
 
         <section class="patties">
           <label for="amount">How many patties would you like?</label>
-					<input id="amount" type="number" step="1" name="amount">
+	  <input id="amount" type="number" step="1" name="amount">
         </section>
 
         <section class="cooked">
@@ -24,7 +24,7 @@
           <br>
           <!--first checkbox-->
           <input id="lettuce" name="topping" type="checkbox" value="lettuce">
-					<label for="lettuce">Lettuce</label>
+	  <label for="lettuce">Lettuce</label>
         
           <!--second checkbox-->
           <input id="tomato" type="checkbox" name="topping" value="tomato">
@@ -48,7 +48,7 @@
         </section>
 
         <section class="bun-type">
-					<label for="bun">What type of bun would you like?</label>
+	  <label for="bun">What type of bun would you like?</label>
           <select name="bun" id="bun">
             <option value="sesame">sesame</option>
             <option value="potato">potato</option>
@@ -57,7 +57,7 @@
         </section>
 
         <section class="sauce-selection">
-					<label for="sauce">What type of sauce would you like?</label>
+	  <label for="sauce">What type of sauce would you like?</label>
           <input type="text" list="sauces" id="sauce" name="sauce">
           <datalist id="sauces">
             <option value="ketchup">ketchup</option>
