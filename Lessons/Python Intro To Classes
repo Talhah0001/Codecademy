@@ -18,3 +18,29 @@ class Grade:
 
 grade = Grade()
 print(grade.minimum_passing)
+
+#Method
+class Rules:
+  def washing_brushes(self):
+    return "Point bristles towards the basin while washing your brushes."
+
+#Arguments
+class Circle:
+  pi = 3.14
+  def area(self, radius):
+    return Circle.pi * radius ** 2
+
+circle = Circle() # Insatance of circle and converting to a variable
+
+pizza_area = circle.area(12/2)
+teaching_table_area = circle.area(36/2)
+round_room_area = circle.area(11460/2)
+
+#Constructor:
+class Circle:
+  pi = 3.14
+
+  def __init__(self, diameter): #Creates constuctor
+    print("New circle with diameter: {}".format(diameter)) #Prints New circle with diameter 36
+
+teaching_table = Circle(36)
