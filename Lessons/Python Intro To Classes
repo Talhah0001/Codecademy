@@ -44,3 +44,39 @@ class Circle:
     print("New circle with diameter: {}".format(diameter)) #Prints New circle with diameter 36
 
 teaching_table = Circle(36)
+
+#Attribute Functions
+can_we_count_it = [{'s': False}, "sassafrass", 18, ["a", "c", "s", "d", "s"]]
+
+for element in can_we_count_it:
+  if hasattr(element, "count"):
+    print(str(type(element)) + " has the count attribute!")
+  else:
+    print(str(type(element)) + " does not have the count attribute :(")
+
+#Displays objects attributes at runtime:
+dir(5)
+def this_function_is_an_object(self):
+  pass
+print(dir(this_function_is_an_object))
+
+# Review
+class Student:
+  def __init__(self,name,year): #constuctor
+    self.name = name
+    self.year = year
+    self.grades = [] #empty list
+
+  def add_grade(self,grade):
+    if type(grade) is Grade:
+      self.grades.append(grade)
+
+class Grade:
+  minimum_passing = 65 #attribute
+  def __init__(self,score):
+    self.score = score
+
+roger = Student("Roger van der Weyden",10) #3 instances
+sandro = Student("Sandro Botticelli",12)
+pieter = Student("Pieter Bruegel the Elder",8)
+pieter.add_grade(Grade(100))
