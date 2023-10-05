@@ -1,16 +1,20 @@
-class Employee:
+class Employee():
   new_id = 1
-
   def __init__(self):
     self.id = Employee.new_id
     Employee.new_id += 1
-  
+
   def say_id(self):
-    print("My id is {}".format(self.id)) # 1 or more added into brackets
+    print("My id is {}.".format(self.id))
 
-e1=Employee()
-e2=Employee()
-e1.say_id()
-e2.say_id()
-#Outputs - My id is 1, My id is 2
+class Admin(Employee):
+  def say_id(self):
+    super().say_id() #Invokes say_id
+    print("I am an admin.")
 
+e1 = Employee()
+e2 = Employee()
+e3 = Admin()
+e3.say_id()
+
+# Executes - My id is 3. I am an admin.
