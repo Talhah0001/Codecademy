@@ -1,0 +1,15 @@
+from collections import namedtuple
+
+country = namedtuple("country",["name","capital","continent"])
+
+France = country("France","Paris","Europe")
+Japan = country("Japan","Tokyo","Asia")
+Senegal = country("Senegal","Dakar","Africa")
+
+countries = (France,Japan,Senegal) #Will ouput the name capital and continent
+--------------------------------------------------------------------------------
+square = lambda x:x*x
+cube = lambda x:x*x*x
+#Defines the square and cube function without using the name
+#i.e def square is not needed
+--------------------------------------------------------------------------------
