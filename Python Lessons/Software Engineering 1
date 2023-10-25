@@ -1,3 +1,5 @@
+#Using Declarative Code
+
 from collections import namedtuple
 
 country = namedtuple("country",["name","capital","continent"])
@@ -12,4 +14,19 @@ square = lambda x:x*x
 cube = lambda x:x*x*x
 #Defines the square and cube function without using the name
 #i.e def square is not needed
+--------------------------------------------------------------------------------
+from functools import reduce
+nums = (16, 2, 19, 22, 10, 23, 16, 2, 27, 29, 19, 26, 12, 20, 16, 29, 6, 2, 12, 20)
+
+filtered_numbers = filter(lambda x:x%2==0,nums) #This is a filter function (Applies function to each item and returns ones that are true)
+print(tuple(filtered_numbers)) #removes odd numbers from list
+
+mapped_numbers = map(lambda x:x*3,nums) #This is a map function (Applies function to every item)
+print(tuple(mapped_numbers)) #Times all numbers list by 3
+
+sum = reduce(lambda x,y: x+y,nums) #This is a reduce function (Returns an aggregated value so all numbers are formed into a cluster)
+print(sum) # adds all numbers in list together
+--------------------------------------------------------------------------------
+functional_way = map(lambda x:x*3,filter(lambda y:y%3==0,nums)) #Map first then filter. Map usaully use x and filter use y.
+print(tuple(functional_way)) #All numbers in list are times by 3
 --------------------------------------------------------------------------------
