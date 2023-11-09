@@ -1,0 +1,9 @@
+#Initiallises Logger and reduces chance of object being reused
+import logging
+import sys
+
+logger=logging.getLogger(__name__)
+
+stream_handler=logging.StreamHandler(sys.stdout)
+logger.addHandler(stream_handler) #Informs the logger where we want the message to go
+
